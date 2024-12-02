@@ -10,16 +10,22 @@ with open("inp.txt", "r") as f:
 l1.sort()
 l2.sort()
 
-res: int = 0
-for left, right in zip(l1, l2):
-    res += abs(left - right)
 
-print("Result:", res, end="\n")
+def part_a():
+    res: int = 0
+    for left, right in zip(l1, l2):
+        res += abs(left - right)
 
-# Part 2
+    return res
 
-res: int = 0
-for i in l1:
-    res += i * l2.count(i)
 
-print(f"Result 2: {res}")
+def part_b():
+    res: int = 0
+    for i in l1:
+        res += i * l2.count(i)
+
+    return res
+
+
+print(f"Part A: {part_a()}")
+print(f"Part B: {part_b()}")
