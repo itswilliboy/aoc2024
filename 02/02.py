@@ -52,7 +52,7 @@ def part_b() -> int:
             continue
 
         to_remove = 0
-        is_safe: bool = False
+        is_safe = False
 
         for _ in range(len(arr)):
             new = np.delete(arr, to_remove)
