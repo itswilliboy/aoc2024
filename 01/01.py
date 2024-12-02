@@ -12,7 +12,7 @@ l2.sort()
 
 
 def part_a():
-    res: int = 0
+    res = 0
     for left, right in zip(l1, l2):
         res += abs(left - right)
 
@@ -20,7 +20,7 @@ def part_a():
 
 
 def part_b():
-    res: int = 0
+    res = 0
     for i in l1:
         res += i * l2.count(i)
 
