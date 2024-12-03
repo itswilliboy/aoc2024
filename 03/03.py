@@ -47,5 +47,5 @@ def part_b():
 
     return sum(total)
 
-
-print(part_b())
+print(f"Part B: {part_b()}")
+print(f"Part A: {part_a()}")
