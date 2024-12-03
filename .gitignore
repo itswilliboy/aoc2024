@@ -1,4 +1,5 @@
 **/inp.txt
+**/tst.txt
 .venv
 .ruff_cache
 .vscode
