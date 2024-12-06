@@ -28,6 +28,7 @@ def check_sides(x: int, y: int) -> int:
 
     return found
 
+
 # Thanks Leo
 def check_vertical(x: int, y: int) -> int:
     found = 0
@@ -69,7 +70,7 @@ def check_diagonal(x: int, y: int) -> int:
                     next_coord = y + i, x - i
                 case 3:
                     next_coord = y - i, x - i
-                case _: 
+                case _:
                     pass
 
             new_y, new_x = next_coord
