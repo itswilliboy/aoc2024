@@ -59,7 +59,7 @@ def check_diagonal(x: int, y: int) -> int:
     while dirr <= 3:
         chars: list[str] = []
         for i in range(4):
-            next_coord: tuple[int, int]
+            next_coord: tuple[int, int] = tuple()
             match dirr:
                 case 0:
                     next_coord = y - i, x + i
@@ -69,6 +69,8 @@ def check_diagonal(x: int, y: int) -> int:
                     next_coord = y + i, x - i
                 case 3:
                     next_coord = y - i, x - i
+                case _: 
+                    pass
 
             new_y, new_x = next_coord
 
@@ -115,7 +117,8 @@ def check_cross(x: int, y: int) -> int:
         else:
             b.append(v)
 
-    a.insert(1, "A"), b.insert(1, "A")
+    a.insert(1, "A")
+    b.insert(1, "A")
     print(f"{y}:{x} -> {a} : {b}", check_x_mas(a) and check_x_mas(b))
 
     if check_x_mas(a) and check_x_mas(b):
