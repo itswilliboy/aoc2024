@@ -44,11 +44,7 @@ def part_a() -> int:
     correct_updates: _2DArray[int] = []
 
     for update in updates:
-        applicable_rules: _2DArray[int] = []
-        for rule in rules:
-            first, second = rule
-            if first in update and second in update:
-                applicable_rules.append(rule)
+        applicable_rules = get_applicable_rules(update)
 
         correct: list[bool] = []
         for rule in applicable_rules:
